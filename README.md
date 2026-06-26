@@ -124,7 +124,8 @@ Add Screenshot Here
 After Audio Augmentation
 
 **35,528 Training Samples**
-
+the original RAVDESS and CREMA-D datasets are not included in this repository because of thier size. 
+You can download them from their official sources and place themin the 'data/' running the preprocessing pipeline. 
 ---
 
 # 🎭 Emotion Classes
