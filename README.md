@@ -1,393 +1,254 @@
-<div align="center">
-
-# 🎤 Speech Emotion Recognition using Deep Learning
-
-### AI-powered Speech Emotion Recognition using TensorFlow, Librosa and Streamlit
+# 🎙️ Speech Emotion Recognition using Deep Learning
 
 <p align="center">
 
-<img src="https://img.shields.io/badge/Python-3.13-blue?logo=python">
-
-<img src="https://img.shields.io/badge/TensorFlow-2.21-FF6F00?logo=tensorflow&logoColor=white">
-
-<img src="https://img.shields.io/badge/Streamlit-1.58-FF4B4B?logo=streamlit&logoColor=white">
-
-<img src="https://img.shields.io/badge/Deep%20Learning-AI-blueviolet">
-
-<img src="https://img.shields.io/badge/Status-Completed-brightgreen">
-
-<img src="https://img.shields.io/github/stars/Divyeshinturi/Speech-Emotion-Recognition?style=social">
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.16-orange)
+![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red)
+![Deep Learning](https://img.shields.io/badge/AI-Deep%20Learning-green)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 </p>
 
 ---
 
-### 🎯 Detect Human Emotions from Speech using Artificial Intelligence
+## 📌 Project Overview
 
-Built using **TensorFlow**, **Librosa**, **Streamlit**, **Plotly**, and **Scikit-learn**.
+Speech Emotion Recognition (SER) is a Deep Learning application that predicts the emotional state of a speaker from their voice.
 
-</div>
+The system extracts meaningful audio features using **Librosa**, processes them through a trained **TensorFlow Deep Learning model**, and predicts one of several human emotions.
 
----
-
-# 📖 Table of Contents
-
-- Project Overview
-- Features
-- Demo
-- Dataset
-- Project Workflow
-- Model Architecture
-- Model Performance
-- Screenshots
-- Installation
-- Usage
-- Folder Structure
-- Technologies Used
-- Future Improvements
-- Author
-- License
+The project is deployed online using **Render** with an interactive **Streamlit** interface.
 
 ---
 
-# 📌 Project Overview
+## 🚀 Live Demo
 
-Speech Emotion Recognition (SER) is an Artificial Intelligence application that identifies a speaker's emotional state from voice recordings.
+**🌐 Live Application**
 
-This project combines the **RAVDESS** and **CREMA-D** datasets and applies a complete Machine Learning pipeline including preprocessing, feature extraction, model training, and deployment through a Streamlit web application.
-
-Users can upload a `.wav` file and receive:
-
-- 🎭 Predicted Emotion
-- 🎯 Confidence Score
-- 📊 Probability Distribution
-- 📈 Interactive Visualization
+https://speech-emotion-recognition-90x5.onrender.com
 
 ---
 
-# 🚀 Features
+## 📂 GitHub Repository
 
-✅ Deep Learning-based Emotion Classification
-
-✅ TensorFlow Neural Network
-
-✅ Audio Feature Extraction using Librosa
-
-✅ Audio Augmentation
-
-✅ Interactive Streamlit Dashboard
-
-✅ Plotly Visualization
-
-✅ Upload WAV Audio
-
-✅ Emotion Probability Graph
-
-✅ Confidence Analysis
+https://github.com/Divyeshinturi/Speech-Emotion-Recognition
 
 ---
 
-# 🎥 Demo
+# ✨ Features
 
-## Home Page
+- 🎤 Upload speech/audio files
+- 🎧 Automatic audio preprocessing
+- 📊 MFCC Feature Extraction
+- 🧠 Deep Learning based prediction
+- 😊 Emotion Classification
+- 📈 Interactive Streamlit Dashboard
+- 📊 Emotion Probability Visualization
+- 🌐 Online Deployment with Render
+
+---
+
+# 🧠 Emotions Supported
+
+- Angry 😠
+- Calm 😌
+- Disgust 🤢
+- Fear 😨
+- Happy 😀
+- Neutral 😐
+- Sad 😢
+- Surprise 😲
+
+---
+
+# 🏗️ Project Architecture
 
 ```
-Add Screenshot Here
-```
-
----
-
-## Prediction Result
-
-```
-Add Screenshot Here
-```
-
----
-
-## Probability Distribution
-
-```
-Add Screenshot Here
-```
-
----
-
-# 📂 Dataset
-
-| Dataset | Samples |
-|----------|---------:|
-| RAVDESS | 1,440 |
-| CREMA-D | 7,442 |
-| Total | 8,882 |
-
-After Audio Augmentation
-
-**35,528 Training Samples**
-the original RAVDESS and CREMA-D datasets are not included in this repository because of thier size. 
-You can download them from their official sources and place themin the 'data/' running the preprocessing pipeline. 
----
-
-# 🎭 Emotion Classes
-
-| Emotion |
-|----------|
-| Neutral |
-| Calm |
-| Happy |
-| Sad |
-| Angry |
-| Fearful |
-| Disgust |
-| Surprised |
-
----
-
-# ⚙️ Project Workflow
-
-```
-Speech Dataset
+Audio Input
       │
       ▼
 Audio Validation
       │
       ▼
-Audio Augmentation
+Feature Extraction (MFCC)
       │
       ▼
-Feature Extraction
+Preprocessing
       │
       ▼
-Feature Scaling
+TensorFlow Deep Learning Model
       │
       ▼
-Model Training
+Emotion Prediction
       │
       ▼
-Model Saving
-      │
-      ▼
-Streamlit Deployment
+Streamlit Dashboard
 ```
 
 ---
 
-# 📊 Feature Extraction
+# 🛠️ Tech Stack
 
-| Feature | Count |
-|----------|-------:|
-| MFCC | 40 |
-| Chroma | 1 |
-| Mel Spectrogram | 1 |
-| Zero Crossing Rate | 1 |
-| RMS Energy | 1 |
+### Programming Language
 
-Total Features = **44**
+- Python 3.11
 
----
+### Deep Learning
 
-# 🧠 Deep Learning Architecture
+- TensorFlow
+- Keras
 
-```
-Input Layer (44)
+### Machine Learning
 
-↓
+- Scikit-learn
 
-Dense (256)
+### Audio Processing
 
-↓
+- Librosa
+- SoundFile
 
-Batch Normalization
+### Data Processing
 
-↓
+- NumPy
+- Pandas
 
-Dropout
+### Visualization
 
-↓
+- Plotly
+- Matplotlib
 
-Dense (128)
+### Deployment
 
-↓
+- Streamlit
+- Render
 
-Batch Normalization
+### Version Control
 
-↓
-
-Dropout
-
-↓
-
-Dense (64)
-
-↓
-
-Dropout
-
-↓
-
-Softmax (8 Classes)
-```
+- Git
+- GitHub
 
 ---
 
-# 📈 Model Performance
-
-| Metric | Value |
-|----------|-------:|
-| Test Accuracy | 58.13% |
-| Emotion Classes | 8 |
-| Training Samples | 35,528 |
-
----
-
-# 📸 Screenshots
-
-## 🏠 Home Page
+# 📁 Project Structure
 
 ```
-assets/home.png
+Speech-Emotion-Recognition
+│
+├── models/
+│   ├── emotion_model.keras
+│   ├── emotion_model.pkl
+│   ├── history.pkl
+│   ├── scaler.pkl
+│   └── label_encoder.pkl
+│
+├── src/
+│   ├── feature_extraction.py
+│   ├── preprocess.py
+│   ├── predict.py
+│   ├── dataset_loader.py
+│   ├── train_model.py
+│   ├── evaluate.py
+│   └── utils.py
+│
+├── app.py
+├── requirements.txt
+├── runtime.txt
+└── README.md
 ```
 
 ---
 
-## 🎤 Prediction
+# ⚙️ Installation
 
-```
-assets/prediction.png
-```
-
----
-
-## 📊 Probability Distribution
-
-```
-assets/probability.png
-```
-
----
-
-# 📁 Folder Structure
-
-```text
-Speech-Emotion-Recognition/
-
-app.py
-
-README.md
-
-requirements.txt
-
-.gitignore
-
-models/
-
-outputs/
-
-data/
-
-assets/
-
-src/
-```
-
----
-
-# 💻 Installation
-
-Clone Repository
+Clone the repository
 
 ```bash
 git clone https://github.com/Divyeshinturi/Speech-Emotion-Recognition.git
 ```
 
-Move to Project
+Go to the project folder
 
 ```bash
 cd Speech-Emotion-Recognition
 ```
 
-Install Dependencies
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run
+Run the application
 
 ```bash
-python -m streamlit run app.py
+streamlit run app.py
 ```
 
 ---
 
-# 🛠 Technologies Used
+# 📊 Workflow
 
-- Python
-- TensorFlow
-- Streamlit
-- Librosa
-- Plotly
-- Pandas
-- NumPy
-- Scikit-learn
-- Joblib
+1. Upload Speech Audio
+2. Validate Audio
+3. Extract MFCC Features
+4. Preprocess Data
+5. Load Trained Model
+6. Predict Emotion
+7. Display Prediction
+8. Visualize Results
 
 ---
 
-# 🔮 Future Improvements
+# 🎯 Applications
 
-- CNN + LSTM
-- Wav2Vec2
-- HuBERT
-- Real-time Microphone Support
-- Mobile Application
-- REST API
-- Cloud Deployment
-- Higher Accuracy
+- Mental Health Monitoring
+- Customer Service Analytics
+- Virtual Assistants
+- Human-Computer Interaction
+- Call Center Analysis
+- Healthcare
+- Smart Voice Systems
+- Educational Research
+
+---
+
+# 📈 Future Improvements
+
+- Live Microphone Recording
+- Transformer-based Speech Models
+- Multilingual Emotion Recognition
+- Speech-to-Text Integration
+- Real-time Emotion Detection
+- Model Performance Dashboard
+- Cloud Storage Support
 
 ---
 
 # 👨‍💻 Author
 
-## INTURI DIVYESH
+**INTURI DIVYESH**
 
 Computer Science Engineering Student
 
-Interested in
+Sathyabama Institute of Science and Technology
 
-- Artificial Intelligence
-- Machine Learning
-- Deep Learning
-- Data Science
-- NLP
-- Computer Vision
-
-### GitHub
-
+GitHub:
 https://github.com/Divyeshinturi
 
-### LinkedIn
-
-(Add your LinkedIn URL)
+LinkedIn:
+(Add your LinkedIn profile link here)
 
 ---
 
 # ⭐ Support
 
-If you found this repository useful,
+If you found this project useful, please consider giving it a ⭐ on GitHub.
 
-please consider giving it a ⭐ on GitHub.
-
----
-
-# 📄 License
-
-MIT License
+It helps others discover the project and motivates future improvements.
 
 ---
 
-<div align="center">
+# 📜 License
 
-Made with ❤️ by **INTURI DIVYESH**
-
-</div>
+This project is intended for educational and research purposes.
