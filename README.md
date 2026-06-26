@@ -12,25 +12,25 @@
 
 ---
 
-## 📌 Project Overview
+# 📌 Project Overview
 
 Speech Emotion Recognition (SER) is a Deep Learning application that predicts the emotional state of a speaker from their voice.
 
-The system extracts meaningful audio features using **Librosa**, processes them through a trained **TensorFlow Deep Learning model**, and predicts one of several human emotions.
+The system extracts meaningful audio features using **Librosa**, processes them through a trained **TensorFlow/Keras Deep Learning model**, and predicts one of **eight human emotions**.
 
-The project is deployed online using **Render** with an interactive **Streamlit** interface.
-
----
-
-## 🚀 Live Demo
-
-**🌐 Live Application**
-
-https://speech-emotion-recognition-90x5.onrender.com
+The application features an interactive **Streamlit** interface and is deployed online using **Render**.
 
 ---
 
-## 📂 GitHub Repository
+# 🚀 Live Demo
+
+### 🌐 Live Application
+
+https://speech-emotion-recognition-90x5.onrender.com/
+
+---
+
+# 📂 GitHub Repository
 
 https://github.com/Divyeshinturi/Speech-Emotion-Recognition
 
@@ -38,27 +38,27 @@ https://github.com/Divyeshinturi/Speech-Emotion-Recognition
 
 # ✨ Features
 
-- 🎤 Upload speech/audio files
-- 🎧 Automatic audio preprocessing
+- 🎤 Upload WAV audio files
+- 🎧 Automatic speech preprocessing
 - 📊 MFCC Feature Extraction
-- 🧠 Deep Learning based prediction
-- 😊 Emotion Classification
-- 📈 Interactive Streamlit Dashboard
-- 📊 Emotion Probability Visualization
-- 🌐 Online Deployment with Render
+- 🧠 TensorFlow Deep Learning Model
+- 😊 8-Class Emotion Classification
+- 📈 Emotion Probability Visualization
+- 🎨 Interactive Streamlit Dashboard
+- 🌐 Public Deployment using Render
 
 ---
 
-# 🧠 Emotions Supported
+# 🧠 Supported Emotions
 
-- Angry 😠
-- Calm 😌
-- Disgust 🤢
-- Fear 😨
-- Happy 😀
-- Neutral 😐
-- Sad 😢
-- Surprise 😲
+- 😠 Angry
+- 😌 Calm
+- 🤢 Disgust
+- 😨 Fearful
+- 😀 Happy
+- 😐 Neutral
+- 😢 Sad
+- 😲 Surprised
 
 ---
 
@@ -74,13 +74,16 @@ Audio Validation
 Feature Extraction (MFCC)
       │
       ▼
-Preprocessing
+Feature Scaling
       │
       ▼
 TensorFlow Deep Learning Model
       │
       ▼
 Emotion Prediction
+      │
+      ▼
+Probability Visualization
       │
       ▼
 Streamlit Dashboard
@@ -137,7 +140,6 @@ Speech-Emotion-Recognition
 │
 ├── models/
 │   ├── emotion_model.keras
-│   ├── emotion_model.pkl
 │   ├── history.pkl
 │   ├── scaler.pkl
 │   └── label_encoder.pkl
@@ -146,40 +148,44 @@ Speech-Emotion-Recognition
 │   ├── feature_extraction.py
 │   ├── preprocess.py
 │   ├── predict.py
-│   ├── dataset_loader.py
 │   ├── train_model.py
 │   ├── evaluate.py
+│   ├── dataset_loader.py
+│   ├── audio_validator.py
+│   ├── augmentation.py
 │   └── utils.py
 │
 ├── app.py
 ├── requirements.txt
 ├── runtime.txt
-└── README.md
+├── .python-version
+├── README.md
+└── .gitignore
 ```
 
 ---
 
 # ⚙️ Installation
 
-Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/Divyeshinturi/Speech-Emotion-Recognition.git
 ```
 
-Go to the project folder
+### Navigate to the project
 
 ```bash
 cd Speech-Emotion-Recognition
 ```
 
-Install dependencies
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the application
+### Run the application
 
 ```bash
 streamlit run app.py
@@ -189,55 +195,84 @@ streamlit run app.py
 
 # 📊 Workflow
 
-1. Upload Speech Audio
-2. Validate Audio
-3. Extract MFCC Features
-4. Preprocess Data
-5. Load Trained Model
-6. Predict Emotion
-7. Display Prediction
-8. Visualize Results
+1. Upload a WAV audio file
+2. Validate audio quality
+3. Extract MFCC features
+4. Scale extracted features
+5. Load the trained TensorFlow model
+6. Predict the emotion
+7. Display confidence scores
+8. Visualize emotion probabilities
+
+---
+
+# 📈 Results
+
+- ✅ Emotion recognition using Deep Learning
+- ✅ 8 emotion classes supported
+- ✅ TensorFlow-based neural network
+- ✅ Interactive probability visualization
+- ✅ Publicly deployed using Render
+- ✅ User-friendly Streamlit interface
 
 ---
 
 # 🎯 Applications
 
 - Mental Health Monitoring
-- Customer Service Analytics
-- Virtual Assistants
 - Human-Computer Interaction
-- Call Center Analysis
+- Customer Service Analytics
+- Voice-based AI Systems
+- Virtual Assistants
 - Healthcare
-- Smart Voice Systems
+- Call Center Analytics
 - Educational Research
 
 ---
 
 # 📈 Future Improvements
 
-- Live Microphone Recording
-- Transformer-based Speech Models
-- Multilingual Emotion Recognition
-- Speech-to-Text Integration
-- Real-time Emotion Detection
-- Model Performance Dashboard
-- Cloud Storage Support
+- 🎙️ Live microphone emotion recognition
+- 🌍 Multilingual speech emotion recognition
+- 🤖 Transformer-based speech models
+- 📱 Mobile-friendly interface
+- 📊 Model analytics dashboard
+- ☁️ Cloud storage support
+- 🔄 Real-time emotion detection
+
+---
+
+# 📸 Screenshots
+
+> Add screenshots of your application here.
+
+Example:
+
+```
+screenshots/
+├── home.png
+├── upload.png
+├── prediction.png
+└── chart.png
+```
 
 ---
 
 # 👨‍💻 Author
 
-**INTURI DIVYESH**
+## INTURI DIVYESH
 
 Computer Science Engineering Student
 
 Sathyabama Institute of Science and Technology
 
-GitHub:
+### GitHub
+
 https://github.com/Divyeshinturi
 
-LinkedIn:
-(Add your LinkedIn profile link here)
+### Live Demo
+
+https://speech-emotion-recognition-90x5.onrender.com/
 
 ---
 
@@ -245,10 +280,12 @@ LinkedIn:
 
 If you found this project useful, please consider giving it a ⭐ on GitHub.
 
-It helps others discover the project and motivates future improvements.
+It motivates future improvements and helps others discover the project.
 
 ---
 
 # 📜 License
 
 This project is intended for educational and research purposes.
+
+© 2026 INTURI DIVYESH
